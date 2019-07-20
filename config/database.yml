@@ -3,8 +3,8 @@ development:
   encoding: unicode
   database: sheql_dev
   pool: 2
-  username:
-  password: 
+  username: postgres
+  password: Coding123
 
 production:
   adapter: postgresql
