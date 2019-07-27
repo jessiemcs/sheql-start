@@ -6,11 +6,15 @@ Use the [sinatra-app](https://github.com/Gmfholley/sinatra-app) walk throughs as
 
 1. Log into GitHub and fork this repo to your own account.
 1. Click the clone or download link and copy the ssh clone name.  (Toggle between https and ssh until you see Clone with ssh indicator.)
-1. Log into Cloud 9.
-1. In the root of your Cloud 9 workspace, open a terminal window and type `git clone ` and then paste the name of the repo you copied.  It might look like `git clone git@github.com:Gmfholley/sheql-start.git`.
+1. Open Git Bash and type `git clone ` and then paste the name of the repo you copied.  It might look like `git clone git@github.com:Gmfholley/sheql-start.git`.
 1. Change your directory into the folder you just made: `cd sheql-start`.
+1. Run gem install bundler
 1. `bundle install` to install all the files for this repo.
-1. `sudo service postgresql start` to start postgres.
+1. Run rake db:setupMCS
+1. Run bundle clean --force if there's unresolved specs
+1. Do rake db:create to make a database
+1. Do rake db:migrate to run a migration
+1. Do rake db:seed to open and run a seeds file
 
 Now that you've installed and started postgres, you're ready to get started.
 
