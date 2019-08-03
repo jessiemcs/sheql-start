@@ -10,7 +10,7 @@ class CreateCharacters < ActiveRecord::Migration[5.2]
 	  t.text :backstory
 	  t.string :link
 	  t.string :picture
-	  t.references :games
+	  t.references :game
 	end
   end
 end

@@ -1,0 +1,36 @@
+    <main>        
+        <section>    
+            <div class="container">
+                <div class="two-thirds">
+                    <div class="small-padding">
+                        <h2 class="green-text"> <%= @game.name %> </h2>
+                        <h5>Abbreviation: <%= @game.abbreviation %> </h5>
+                        <hr class="green-underline">
+                        <h5> Release date: <%= @game.release_date %> </h5>
+                        <h5> Description of the game</h5>
+                        <p><%= @game.description %></p>
+                        <p> Source information: <%= @game.link %></p>
+                        <img src="<%= @game.picture%>">
+                    </div>
+                </div>
+                <div class="third">
+                    <div class="small-padding light-green-background round-corners">
+                        <div class="small-padding small-bottom-margin green-border round-corners">
+                            <p>Characters (Just the important ones)</p>
+                        </div>
+                        <div class="small-padding small-bottom-margin green-background light-text round-corners">
+
+                        <% @game.characters.each do |sans| %>
+                            <div class="container">
+                                <div class="half picture"><img src="<%=sans.picture%>"></div>
+                                <div class="half name"> <%=sans.name%></div>
+                            </div>
+                        <% end %>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>

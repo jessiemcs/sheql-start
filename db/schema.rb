@@ -41,8 +41,8 @@ ActiveRecord::Schema.define(version: 2019_07_27_172100) do
     t.text "backstory"
     t.string "link"
     t.string "picture"
-    t.bigint "games_id"
-    t.index ["games_id"], name: "index_characters_on_games_id"
+    t.bigint "game_id"
+    t.index ["game_id"], name: "index_characters_on_game_id"
   end
 
   create_table "games", force: :cascade do |t|
