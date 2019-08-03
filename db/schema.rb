@@ -10,12 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_27_164644) do
+ActiveRecord::Schema.define(version: 2019_07_27_172100) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "anime", force: :cascade do |t|
+  create_table "anime_characters", force: :cascade do |t|
+    t.bigint "character_id"
+    t.bigint "anime_id"
+    t.index ["anime_id"], name: "index_anime_characters_on_anime_id"
+    t.index ["character_id"], name: "index_anime_characters_on_character_id"
+  end
+
+  create_table "animes", force: :cascade do |t|
     t.string "name"
     t.string "abbreviation"
     t.date "premiere_date"
@@ -28,7 +35,8 @@ ActiveRecord::Schema.define(version: 2019_07_27_164644) do
     t.string "name"
     t.integer "weight"
     t.integer "height"
-    t.string "aliases"
+    t.text "aliases"
+    t.string "talent"
     t.date "birthday"
     t.text "backstory"
     t.string "link"

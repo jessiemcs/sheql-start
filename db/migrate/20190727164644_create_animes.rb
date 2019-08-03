@@ -1,6 +1,6 @@
-class Anime < ActiveRecord::Migration[5.2]
+class CreateAnimes < ActiveRecord::Migration[5.2]
   def change
-  create_table :anime do |t|
+  create_table :animes do |t|
       t.string :name
       t.string :abbreviation
       t.date :premiere_date
