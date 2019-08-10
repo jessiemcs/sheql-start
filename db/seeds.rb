@@ -8,6 +8,9 @@ EOS
 description_drae = <<-EOS
 Komaru Naegi
 EOS
+description_dr3 = <<-EOS
+On the Despair side of the story, Hajime Hinata, who is in the reserve course interacts with fellow class: 77-B. The students of this class participate in (almost) normal school activities, until Junko Enoshima succeeds in turning Hajime into Izuru Kamakura and turns Class 77-B student, Mikan Tsumiki into a despaired version of herself. After Mikan's transition to despair, she returns to class as normal. Class 77 then proceeds to the same location where the cast of Danganronpa: Trigger Happy Havoc/ Danganronpa: The Animation held class trials. After being pushed into an elevator via a secret room, class representative, Chiaki Nanami is sent to be executed'
+EOS
 games = [
 	{name: 'Danganronpa: Trigger Happy Havoc', abbreviation: 'DR:THH', release_date:Date.parse('25/11/2010'), description: description_dr, link: 'https://danganronpa.fandom.com/wiki/Portal:Danganronpa:_Trigger_Happy_Havoc', picture: 'https://vignette.wikia.nocookie.net/danganronpa/images/9/92/Danganronpa_Trigger_Happy_Havoc_Box_Art_-_PS_Vita_-_North_America.jpg/revision/latest/scale-to-width-down/160?cb=20180404120034'},
 	{name: ' Super Danganronpa 2: Goodbye Despair', abbreviation: 'SDR2', release_date:Date.parse('26/7/2012'), description: description_dr2, link:'https://danganronpa.fandom.com/wiki/Portal:Danganronpa_2:_Goodbye_Despair', picture:'https://vignette.wikia.nocookie.net/danganronpa/images/9/99/Danganronpa_2_Goodbye_Despair_Box_Art_-_Vita_-_North_America.jpg/revision/latest/scale-to-width-down/160?cb=20140418154650'},
@@ -32,8 +35,8 @@ description_drta = <<-EOS
 
 EOS
 anime = [
-	{name: 'Danganronpa: The Animation', abbreviation: 'DR:TA', premiere_date:Date.parse('4/7/2013'), description: description_drta, link: 'https://danganronpa.fandom.com/wiki/Danganronpa%3A_The_Animation', picture: 'https://vignette.wikia.nocookie.net/danganronpa/images/d/df/Danganronpa_the_Animation_Poster.jpg/revision/latest/scale-to-width-down/350?cb=20180305211035'},
-	{name: "Danganronpa 3: End of Hope's Peak Academy", abbreviation: 'DR3'},
+	{name: 'Danganronpa: The Animation', abbreviation: 'DR:TA', premiere_date:Date.parse('4/7/2013'), description: description_dr, link: 'https://danganronpa.fandom.com/wiki/Danganronpa%3A_The_Animation', picture: 'https://vignette.wikia.nocookie.net/danganronpa/images/d/df/Danganronpa_the_Animation_Poster.jpg/revision/latest/scale-to-width-down/350?cb=20180305211035'},
+	{name: "Danganronpa 3: End of Hope's Peak Academy", abbreviation: 'DR3', premiere_date: Date.parse('7/11/2016'), description: description_dr3},
 ]
 anime.each do |a|
 	Anime.create_with(a).find_or_create_by(abbreviation: a[:abbreviation])

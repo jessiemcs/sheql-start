@@ -3,14 +3,14 @@
             <div class="container">
                 <div class="two-thirds">
                     <div class="small-padding">
-                        <h2 class="black-text"> <%= @game.name %> </h2>
-                        <h5>Abbreviation: <%= @game.abbreviation %> </h5>
+                        <h2 class="black-text"> <%= @anime.name %> </h2>
+                        <h5>Abbreviation: <%= @anime.abbreviation %> </h5>
                         <hr class="pink-underline">
-                        <h5> Release date: <%= @game.release_date %> </h5>
-                        <h5> Description of the game</h5>
-                        <p><%= @game.description %></p>
-                        <p> Source information: <%= @game.link %></p>
-                        <img src="<%= @game.picture%>">
+                        <h5> Premiere date: <%= @anime.premiere_date %> </h5>
+                        <h5> Description of the anime</h5>
+                        <p><%= @anime.description %></p>
+                        <p> Source information: <%= @anime.link %></p>
+                        <img src="<%= @anime.picture%>">
                     </div>
                 </div>
                 <div class="third">
@@ -20,10 +20,10 @@
                         </div>
                         <div class="small-padding small-bottom-margin pink-background light-text round-corners">
 
-                        <% @game.characters.each do |sans| %>
+                        <% @anime.characters.each do |sans| %>
                             <div class="container">
                                 <div class="half picture"><img src="<%=sans.picture%>"></div>
-                              <div class="half name"><a href="/characters/<%= sans.id%>"><%=sans.name%></a></div>
+                                <div class="half name"><a href="/characters/<%= sans.id%>"> <%=sans.name%></a></div>
                             </div>
                         <% end %>
 

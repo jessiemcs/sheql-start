@@ -1,0 +1,39 @@
+    <main>        
+        <section>    
+            <div class="container">
+                <div class="two-thirds">
+                    <div class="small-padding">
+                        <h2 class="black-text"> <%= @character.name %> </h2>
+                        <h5>Talent: <%= @character.talent %> </h5>
+                        <hr class="pink-underline">
+                        <h5> Character birthday: <%= @character.birthday %> </h5>
+                        <h5> Description of the character</h5>
+                        <p><%= @character.backstory %></p>
+                        <p> Source information: <%= @character.link %></p>
+                        <img src="<%= @character.picture%>">
+                    </div>
+                </div>
+                <div class="third">
+                    <div class="small-padding light-pink-background round-corners">
+                        <div class="small-padding small-bottom-margin pink-border round-corners">
+                            <p>Anime/Game to character relationship</p>
+                        </div>
+                        <div class="small-padding small-bottom-margin pink-background light-text round-corners">
+
+                        <% @character.animes.each do |sans| %>
+                            <div class="container">
+                                <div class="half picture"><img src="<%=sans.picture%>"></div>
+                                <div class="half name"><a href="/animes/<%= sans.id%>"> <%=sans.name%></a></div>
+                            </div>
+                        <% end %>
+						<div class="container">
+                                <div class="half picture"><img src="<%= @character.game.picture%>"></div>
+                                <div class="half name"><a href="/games/<%= @character.game.id%>"> <%=@character.game.name%></a></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
