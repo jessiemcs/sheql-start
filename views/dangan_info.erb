@@ -9,7 +9,7 @@
                                 <h4>Games</h4>
                             </div>
                             <div class="accordion-content">
-                           <% Game.all.each do |sans| %>
+                           <% Game.all.sort.each do |sans| %>
 								<div class="container">
 								<div class="half picture"><img src="<%=sans.picture%>"></div>
 								<div class="half name"><a href="/games/<%= sans.id%>"> <%=sans.name%></a></div>
